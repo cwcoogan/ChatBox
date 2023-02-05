@@ -2,8 +2,8 @@ package src;
 
 public interface IUser {
 
-  public String userName(String name);
-  public String userPassword(String pwd);
-  public String test(String tst);
+  String userName(String name);
+  String userPassword(String pwd);
+  String test(String tst);
 
 }
