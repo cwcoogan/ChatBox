@@ -22,23 +22,30 @@ public class UserTest {
   }
 
 
+  // create ArrayList for userNames
   public static ArrayList<String> storeUsernamesInList() {
     ArrayList<String> usernameList = new ArrayList<>();
-    while (true) {
-      System.out.println("Would you like to add a username? (yes/no)");
-      Scanner scan = new Scanner(System.in);
-      String input = scan.nextLine();
-      if (input.equals("no")) {
-        break;
-      }
-      usernameList.add(createUserName());
+    System.out.println("Welcome. Enter your username: ");
+    Scanner scan = new Scanner(System.in);
+    String input = scan.nextLine();
+
+    System.out.println("Error. user not found.");
+    System.out.println("Create new user?: ");
+    Scanner scan2 = new Scanner(System.in);
+    String input2 = scan.nextLine();
+    if (input2 == "yes") {
+      System.out.println("Enter new username: ");
+      Scanner scan3 = new Scanner(System.in);
+      String input3 = scan.nextLine();
     }
-    System.out.println("The list of usernames is: " + usernameList);
+    usernameList.add(createUserName());
     return usernameList;
   }
 
-  @Override
-  public String toString() {
-    return "users: " + storeUsernamesInList();
+
+    // to see the string representation.
+    @Override
+    public String toString() {
+      return "users: " + storeUsernamesInList();
+    }
   }
-}
